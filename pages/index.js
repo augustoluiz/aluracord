@@ -58,7 +58,10 @@ export default function PaginaInicial() {
                         }}
                         onSubmit={(e) => {
                             e.preventDefault()
-                            roteamento.push('/chat')
+                            roteamento.push({
+                                pathname: '/chat',
+                                query: {usuario: `${username}`},
+                            })
                         }}
                     >
                         <Titulo tag="h2">Boas vindas de volta!</Titulo>
